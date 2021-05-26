@@ -1,4 +1,9 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿$(document).ready(function () {
+    $(".btn-danger").click(function (e) {
+        var resultado = confirm("Tem certeza que deseja realizar esta operação?");
 
-// Write your JavaScript code.
+        if (resultado == false) {
+            e.preventDefault();
+        }
+    })
+});

@@ -1,0 +1,103 @@
+﻿@model VolvoPesados.Models.Caminhao
+
+@{
+    ViewData["Title"] = "Editar";
+}
+
+@if (TempData["MSG_REGISTRO_ATUALIZADO_COM_SUCESSO"] != null)
+{
+    <p class="alert alert-success">@TempData["MSG_REGISTRO_ATUALIZADO_COM_SUCESSO"]</p>
+}
+
+<h1>Editar Modelo @Model.Iniciais @Model.Modelo </h1>
+<form method="post">
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label asp-for="Iniciais">Iniciais</label>
+            <select asp-for="Iniciais" class="form-control" required="">
+                <option value="">Selecione</option>
+                <option>FH</option>
+                <option>FM</option>
+            </select>
+            <span asp-validation-for="Iniciais" class="text-danger"></span>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label asp-for="Modelo"></label>
+            <input type="text" asp-for="Modelo" class="form-control">
+            <span asp-validation-for="Modelo" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Cor</label>
+            <select class="form-control" asp-for="Cor" required="">
+                <option value="@Model.Cor">Selecione</option>
+                <option value="Preto">Preto</option>
+                <option value="Branco">Branco</option>
+            </select>
+            <span asp-validation-for="Modelo" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label>Eixo</label>
+            <select class="form-control" asp-for="Eixo" required>
+                <option value="">Selecione</option>
+                <option value="2">02</option>
+                <option value="3">03</option>
+                <option value="4">04</option>
+                <option value="5">05</option>
+            </select>
+            <span asp-validation-for="Modelo" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Ano de Fabricação</label>
+            <select class="form-control" asp-for="AnoFabricacao" required="">
+                <option value="@DateTime.Now.Year">@DateTime.Now.Year</option>
+            </select>
+            <span asp-validation-for="AnoFabricacao" class="text-danger"></span>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label asp-for="AnoModelo"></label>
+
+            @if (Model.AnoModelo == DateTime.Now.Year.ToString())
+            {
+
+                <select class="form-control" asp-for="AnoModelo" required="">
+                    <option>@Model.AnoModelo </option>
+                    <option>@DateTime.Now.AddYears(1).Year </option>
+                </select>
+
+            }
+            else
+            {
+                <select class="form-control" asp-for="AnoModelo" required="">
+                    <option>@Model.AnoModelo </option>
+                    <option>@DateTime.Now.Year</option>
+                </select>
+            }
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col-md-6">
+            <label asp-for="Transmissao"></label>
+            <select class="form-control" asp-for="Transmissao" required="">
+                <option value="">Selecione</option>
+                <option>Manual</option>
+                <option>Automatico</option>
+            </select>
+            <span asp-validation-for="Transmissao" class="text-danger"></span>
+        </div>
+    </div>
+
+
+
+
+    <button type="submit" class="btn btn-primary col-2">Salvar</button> <a asp-action="Index" class="btn btn-info col-2">Voltar</a>
+</form>

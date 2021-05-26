@@ -1,8 +1,48 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model List<VolvoPesados.Models.Caminhao>
+
+
+@{
+    ViewData["Title"] = "Bem Vindo";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+@if (TempData["MENSSAGEM_DE_SUCESSO"] != null)
+{
+    <p class="alert alert-success">@TempData["MENSSAGEM_DE_SUCESSO"]</p>
+}
+
+
+
+<div class="table-responsive">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr style="text-align:center">
+                <th scope="col">@Html.DisplayNameFor(model => model.First().Modelo)</th>
+                <th scope="col">@Html.DisplayNameFor(model => model.First().Cor)</th>
+                <th scope="col">@Html.DisplayNameFor(model => model.First().Eixo)</th>
+                <th scope="col">@Html.DisplayNameFor(model => model.First().AnoFabricacao)</th>
+                <th scope="col">@Html.DisplayNameFor(model => model.First().AnoModelo)</th>
+                <th scope="col">@Html.DisplayNameFor(model => model.First().Transmissao)</th>
+                <th scope="col">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Caminhao caminhao in Model)
+            {
+                <tr style="text-align:center">
+                    <td>@caminhao.Iniciais - @caminhao.Modelo</td>
+                    <td>@caminhao.Cor</td>
+                    <td>@caminhao.Eixo</td>
+                    <td>@caminhao.AnoFabricacao</td>
+                    <td>@caminhao.AnoModelo</td>
+                    <td>@caminhao.Transmissao</td>
+                    <td>
+                        <a asp-action="EditarCaminhao" asp-route-id="@caminhao.Id" class="btn btn-info">Editar</a>
+                        <a asp-action="ExcluirCaminhao" asp-route-id="@caminhao.Id" class="btn btn-danger">Excluir</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>
+

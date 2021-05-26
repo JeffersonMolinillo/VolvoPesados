@@ -7,16 +7,18 @@ a.navbar-brand {
   word-break: break-all;
 }
 
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 @media (min-width: 768px) {
   html {
     font-size: 16px;
   }
 }
+
 
 .border-top {
   border-top: 1px solid #e5e5e5;
@@ -40,10 +42,14 @@ html {
   position: relative;
   min-height: 100%;
 }
+.nav{
+    background-color: aqua;
+}
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    overflow: hidden;
+    background-color: lightsteelblue;
 }
 .footer {
   position: absolute;
