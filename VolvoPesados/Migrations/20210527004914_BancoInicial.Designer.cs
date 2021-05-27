@@ -9,8 +9,8 @@ using VolvoPesados.Database;
 namespace VolvoPesados.Migrations
 {
     [DbContext(typeof(VolvoPesadosContext))]
-    [Migration("20210526001213_BancoInicial01")]
-    partial class BancoInicial01
+    [Migration("20210527004914_BancoInicial")]
+    partial class BancoInicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -37,7 +37,7 @@ namespace VolvoPesados.Migrations
 
                     b.Property<int>("Eixo");
 
-                    b.Property<string>("Iniciais")
+                    b.Property<string>("Inicial")
                         .IsRequired();
 
                     b.Property<string>("Modelo")
@@ -55,10 +55,10 @@ namespace VolvoPesados.Migrations
                         {
                             Id = 1,
                             AnoFabricacao = "2021",
-                            AnoModelo = "2022",
+                            AnoModelo = "2021",
                             Cor = "Branco",
                             Eixo = 3,
-                            Iniciais = "FH",
+                            Inicial = "FH",
                             Modelo = "540",
                             Transmissao = "Automatico"
                         },
@@ -69,18 +69,18 @@ namespace VolvoPesados.Migrations
                             AnoModelo = "2022",
                             Cor = "Amarelo",
                             Eixo = 2,
-                            Iniciais = "FH",
+                            Inicial = "FH",
                             Modelo = "460",
-                            Transmissao = "Automatico"
+                            Transmissao = "Manual"
                         },
                         new
                         {
                             Id = 3,
                             AnoFabricacao = "2021",
-                            AnoModelo = "2022",
+                            AnoModelo = "2021",
                             Cor = "Prata",
                             Eixo = 3,
-                            Iniciais = "FH",
+                            Inicial = "FH",
                             Modelo = "520",
                             Transmissao = "Automatico"
                         },
@@ -91,18 +91,18 @@ namespace VolvoPesados.Migrations
                             AnoModelo = "2022",
                             Cor = "Preto",
                             Eixo = 4,
-                            Iniciais = "FM",
+                            Inicial = "FM",
                             Modelo = "370",
-                            Transmissao = "Automatico"
+                            Transmissao = "Manual"
                         },
                         new
                         {
                             Id = 5,
                             AnoFabricacao = "2021",
-                            AnoModelo = "2022",
+                            AnoModelo = "2021",
                             Cor = "Vermelho",
                             Eixo = 2,
-                            Iniciais = "FM",
+                            Inicial = "FM",
                             Modelo = "380",
                             Transmissao = "Automatico"
                         });

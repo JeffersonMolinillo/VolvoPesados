@@ -12,6 +12,7 @@ namespace VolvoPesados.Repository.Contracts
         void Cadastrar(Caminhao caminhoes);
 
         void Excluir(Caminhao caminhao);
+    
         List<Caminhao> ObterTodosCaminhoes();
 
         Caminhao ObterCaminhaoPorId(int id);

@@ -26,10 +26,6 @@ namespace VolvoPesados.Repository
             _context.SaveChanges();
         }
 
-        public Caminhao ObterCaminhao(int id)
-        {
-            throw new System.NotImplementedException();
-        }
 
         public Caminhao ObterCaminhaoPorId(int id)
         {

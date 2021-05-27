@@ -9,7 +9,7 @@ namespace VolvoPesados.Models
         public int Id { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_CMP_OBRIGÁTORIO")]
-        public string Iniciais { get; set; }
+        public string Inicial { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Mensagem), ErrorMessageResourceName = "MSG_CMP_OBRIGÁTORIO")]
         public string Modelo { get; set; }

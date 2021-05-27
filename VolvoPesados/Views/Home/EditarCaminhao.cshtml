@@ -9,18 +9,18 @@
     <p class="alert alert-success">@TempData["MSG_REGISTRO_ATUALIZADO_COM_SUCESSO"]</p>
 }
 
-<h1>Editar Modelo @Model.Iniciais @Model.Modelo </h1>
+<h1>Editar Modelo @Model.Inicial @Model.Modelo </h1>
 <form method="post">
 
     <div class="form-row">
         <div class="form-group col-md-6">
-            <label asp-for="Iniciais">Iniciais</label>
-            <select asp-for="Iniciais" class="form-control" required="">
+            <label asp-for="Inicial">Inicial</label>
+            <select asp-for="Inicial" class="form-control" required="">
                 <option value="">Selecione</option>
                 <option>FH</option>
                 <option>FM</option>
             </select>
-            <span asp-validation-for="Iniciais" class="text-danger"></span>
+            <span asp-validation-for="Inicial" class="text-danger"></span>
         </div>
 
         <div class="form-group col-md-6">
@@ -35,8 +35,13 @@
             <label>Cor</label>
             <select class="form-control" asp-for="Cor" required="">
                 <option value="@Model.Cor">Selecione</option>
+                <option value="">Selecione</option>
                 <option value="Preto">Preto</option>
                 <option value="Branco">Branco</option>
+                <option value="Branco">Vermelho</option>
+                <option value="Branco">Azul</option>
+                <option value="Branco">Amarelo</option>
+                <option value="Branco">Prata</option>
             </select>
             <span asp-validation-for="Modelo" class="text-danger"></span>
         </div>
