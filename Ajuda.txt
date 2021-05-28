@@ -1,5 +1,0 @@
-Comando para criar o scrip para a criação do Banco de dados
-- Add-Migration BancoInicial
-
-Comando para executar o script, criando o banco de dados.
--Update-Database
