@@ -9,7 +9,7 @@ using VolvoPesados.Database;
 namespace VolvoPesados.Migrations
 {
     [DbContext(typeof(VolvoPesadosContext))]
-    [Migration("20210527033217_BancoInicial")]
+    [Migration("20210528051122_BancoInicial")]
     partial class BancoInicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -58,7 +58,13 @@ namespace VolvoPesados
                 app.UseHsts();
             }
 
-            pesadosContext.Database.Migrate();
+            using (var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope())
+            {
+                var context = serviceScope.ServiceProvider.GetRequiredService<VolvoPesadosContext>();
+                pesadosContext.Database.Migrate();
+
+            }
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
