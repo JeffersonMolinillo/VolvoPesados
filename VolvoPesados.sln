@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VolvoPesados", "VolvoPesados\VolvoPesados.csproj", "{481559CD-5CFA-4C7A-8D00-646973CE445B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VolvoPesadosTestXUnit", "VolvoPesadosTestXUnit\VolvoPesadosTestXUnit.csproj", "{4519A7B6-4498-4128-B591-A82D5FC3C88E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VolvoPesadosTest", "VolvoPesadosTestXUnit\VolvoPesadosTest.csproj", "{4519A7B6-4498-4128-B591-A82D5FC3C88E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

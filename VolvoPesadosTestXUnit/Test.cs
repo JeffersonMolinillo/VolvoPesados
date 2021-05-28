@@ -3,7 +3,7 @@ using VolvoPesados.Models;
 using VolvoPesados.Repository.Contracts;
 using Xunit;
 
-namespace VolvoPesadosTestXUnit
+namespace VolvoPesadosTest
 {
     public class Test
     {

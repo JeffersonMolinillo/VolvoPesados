@@ -1,5 +1,4 @@
-﻿using PagedList;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using VolvoPesados.Models;
 
 

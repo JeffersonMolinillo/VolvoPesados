@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.Configuration;
-using PagedList;
 using System.Collections.Generic;
 using System.Linq;
 using VolvoPesados.Database;
